@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentín 💘</title>
+  <style>
+    body {
+      background: pink;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    h1 {
+      color: #b71c1c;
+      font-size: 3rem;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 10px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    #yes {
+      background: #e91e63;
+      color: white;
+    }
+
+    #no {
+      background: #f8bbd0;
+      color: #880e4f;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Budeš môj Valentín? 💖</h1>
+
+  <button id="yes">ÁNO 💕</button>
+  <button id="no">NIE 😢</button>
+
+  <script>
+    const yes = document.getElementById("yes");
+    const no = document.getElementById("no");
+
+    let size = 1.5;
+    const texts = [
+      "Si si istá?",
+      "Láska, prosím",
+      "Bábätkooo 🥺",
+      "No tak povedz áno 💕",
+      "Prosííím 😭"
+    ];
+    let i = 0;
+
+    no.onclick = () => {
+      size += 0.4;
+      yes.style.fontSize = size + "rem";
+      no.textContent = texts[i % texts.length];
+      i++;
+    };
+
+    yes.onclick = () => {
+      document.body.innerHTML = "<h1>i love u sm sweetheart 💖</h1>";
+    };
+  </script>
+
+</body>
+</html>
